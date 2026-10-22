@@ -1,0 +1,4 @@
+strategy,n_selected,n_errors_found,precision_at_k,errors_per_100,class_coverage
+issue_score,2000,1892,0.946,94.6,6
+combined,2000,1231,0.6155,61.550000000000004,6
+random,2000,297,0.1485,14.85,6

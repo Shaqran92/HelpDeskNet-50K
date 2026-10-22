@@ -1,0 +1,19 @@
+{
+  "precision_at_100": 1.0,
+  "true_positives_at_100": 100,
+  "k_actual_100": 100,
+  "precision_at_200": 1.0,
+  "true_positives_at_200": 200,
+  "k_actual_200": 200,
+  "precision_at_500": 0.99,
+  "true_positives_at_500": 495,
+  "k_actual_500": 500,
+  "precision_at_1000": 0.975,
+  "true_positives_at_1000": 975,
+  "k_actual_1000": 1000,
+  "precision_at_2000": 0.946,
+  "true_positives_at_2000": 1892,
+  "k_actual_2000": 2000,
+  "average_precision": 0.8168182896800242,
+  "total_true_errors": 6009
+}

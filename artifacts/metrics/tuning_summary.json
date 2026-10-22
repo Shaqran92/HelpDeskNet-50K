@@ -1,0 +1,78 @@
+{
+  "best_trial": {
+    "trial_id": "svm_C1.0_cwNone",
+    "model_family": "LinearSVC",
+    "C": 1.0,
+    "class_weight": "None",
+    "fit_time_seconds": 4.44,
+    "accuracy": 0.7638,
+    "macro_f1": 0.648,
+    "weighted_f1": 0.757,
+    "macro_precision": 0.7207,
+    "macro_recall": 0.6022
+  },
+  "total_trials": 18,
+  "timestamp": "2026-10-21T14:53:20",
+  "top_5_trials": [
+    {
+      "trial_id": "svm_C1.0_cwNone",
+      "model_family": "LinearSVC",
+      "C": 1.0,
+      "class_weight": "None",
+      "fit_time_seconds": 4.44,
+      "accuracy": 0.7638,
+      "macro_f1": 0.648,
+      "weighted_f1": 0.757,
+      "macro_precision": 0.7207,
+      "macro_recall": 0.6022
+    },
+    {
+      "trial_id": "svm_C0.5_cwNone",
+      "model_family": "LinearSVC",
+      "C": 0.5,
+      "class_weight": "None",
+      "fit_time_seconds": 3.07,
+      "accuracy": 0.7652,
+      "macro_f1": 0.6195,
+      "weighted_f1": 0.7531,
+      "macro_precision": 0.788,
+      "macro_recall": 0.5502
+    },
+    {
+      "trial_id": "svm_C2.0_cwNone",
+      "model_family": "LinearSVC",
+      "C": 2.0,
+      "class_weight": "None",
+      "fit_time_seconds": 6.68,
+      "accuracy": 0.7462,
+      "macro_f1": 0.6194,
+      "weighted_f1": 0.7431,
+      "macro_precision": 0.6285,
+      "macro_recall": 0.6161
+    },
+    {
+      "trial_id": "logreg_C8.0_cwNone",
+      "model_family": "LogisticRegression",
+      "C": 8.0,
+      "class_weight": "None",
+      "fit_time_seconds": 6.72,
+      "accuracy": 0.7428,
+      "macro_f1": 0.5996,
+      "weighted_f1": 0.7355,
+      "macro_precision": 0.6473,
+      "macro_recall": 0.5703
+    },
+    {
+      "trial_id": "logreg_C5.0_cwNone",
+      "model_family": "LogisticRegression",
+      "C": 5.0,
+      "class_weight": "None",
+      "fit_time_seconds": 7.81,
+      "accuracy": 0.7474,
+      "macro_f1": 0.5959,
+      "weighted_f1": 0.7359,
+      "macro_precision": 0.7146,
+      "macro_recall": 0.5389
+    }
+  ]
+}

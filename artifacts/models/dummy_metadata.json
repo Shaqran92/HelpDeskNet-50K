@@ -1,0 +1,57 @@
+{
+  "accuracy": 0.4962,
+  "macro_f1": 0.11054671835316134,
+  "weighted_f1": 0.32911968988103196,
+  "macro_precision": 0.0827,
+  "macro_recall": 0.16666666666666666,
+  "per_class": {
+    "Billing": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 473
+    },
+    "Refund": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 184
+    },
+    "Technical": {
+      "precision": 0.4962,
+      "recall": 1.0,
+      "f1": 0.663280310118968,
+      "support": 2481
+    },
+    "Account Access": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 106
+    },
+    "Shipping": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 59
+    },
+    "Other": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1697
+    }
+  },
+  "n_samples": 5000,
+  "split_name": "validation",
+  "label_provenance": "proxy",
+  "classes": [
+    "Billing",
+    "Refund",
+    "Technical",
+    "Account Access",
+    "Shipping",
+    "Other"
+  ],
+  "provenance_note": "Evaluated on 'validation' split. Labels are 'proxy'. Results may differ with independently verified labels."
+}

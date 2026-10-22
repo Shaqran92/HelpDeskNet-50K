@@ -1,0 +1,6 @@
+model,accuracy,macro_f1,weighted_f1,macro_precision,macro_recall,n_samples,split,label_provenance
+tfidf_svm (tuned),0.7638,0.6479769267850393,0.756952222068076,0.7206718262502737,0.6021653600130384,5000,validation,proxy
+tfidf_logreg (tuned),0.7428,0.5995814905058051,0.735507653362652,0.6473339462050914,0.5703361863074552,5000,validation,proxy
+tfidf_svm (baseline),0.759,0.5566,0.7402,0.8968,0.4891,5000,validation,proxy
+tfidf_logreg (baseline),0.74,0.5032,0.7175,0.8953,0.4391,5000,validation,proxy
+dummy,0.4962,0.1105,0.3291,0.0827,0.1667,5000,validation,proxy

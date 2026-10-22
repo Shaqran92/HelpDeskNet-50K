@@ -1,0 +1,120 @@
+{
+  "overall_noise": {
+    "n_total": 40000,
+    "n_errors": 6009,
+    "noise_rate": 0.150225,
+    "ci_lower": 0.14675719938478093,
+    "ci_upper": 0.1537599764768368,
+    "ci_method": "wilson",
+    "confidence_level": 0.95,
+    "label_provenance": "proxy_reference (source labels used as reference)"
+  },
+  "class_noise": [
+    {
+      "class": "Billing",
+      "n_total": 3783,
+      "n_errors": 555,
+      "noise_rate": 0.14670896114195084,
+      "ci_lower": 0.1357926226639497,
+      "ci_upper": 0.1583420726838637
+    },
+    {
+      "class": "Refund",
+      "n_total": 1473,
+      "n_errors": 218,
+      "noise_rate": 0.14799728445349628,
+      "ci_lower": 0.13077933977613754,
+      "ci_upper": 0.1670464398250946
+    },
+    {
+      "class": "Technical",
+      "n_total": 19843,
+      "n_errors": 3013,
+      "noise_rate": 0.15184195938114198,
+      "ci_lower": 0.1469161784936433,
+      "ci_upper": 0.15690251584780834
+    },
+    {
+      "class": "Account Access",
+      "n_total": 849,
+      "n_errors": 122,
+      "noise_rate": 0.143698468786808,
+      "ci_lower": 0.12170617786972587,
+      "ci_upper": 0.1689005418873183
+    },
+    {
+      "class": "Shipping",
+      "n_total": 476,
+      "n_errors": 67,
+      "noise_rate": 0.1407563025210084,
+      "ci_lower": 0.11238312696530116,
+      "ci_upper": 0.1748814607163613
+    },
+    {
+      "class": "Other",
+      "n_total": 13576,
+      "n_errors": 2034,
+      "noise_rate": 0.14982321744254568,
+      "ci_lower": 0.14391878173578948,
+      "ci_upper": 0.15592576881865433
+    }
+  ],
+  "most_noisy_class": "Technical",
+  "least_noisy_class": "Shipping",
+  "most_confused_pair": {
+    "from": "Account Access",
+    "to": "Shipping",
+    "rate": 0.03769140164899882
+  },
+  "transition_matrix": {
+    "Billing": {
+      "Billing": 0.8532910388580491,
+      "Refund": 0.029192124915139173,
+      "Technical": 0.030892506173461676,
+      "Account Access": 0.028268551236749116,
+      "Shipping": 0.025210084033613446,
+      "Other": 0.029611078373600472
+    },
+    "Refund": {
+      "Billing": 0.023790642347343377,
+      "Refund": 0.8520027155465038,
+      "Technical": 0.030388550118429673,
+      "Account Access": 0.02120141342756184,
+      "Shipping": 0.03361344537815126,
+      "Other": 0.030347672362993516
+    },
+    "Technical": {
+      "Billing": 0.0317208564631245,
+      "Refund": 0.031907671418873046,
+      "Technical": 0.848158040618858,
+      "Account Access": 0.024734982332155476,
+      "Shipping": 0.029411764705882353,
+      "Other": 0.030126694166175604
+    },
+    "Account Access": {
+      "Billing": 0.034892942109436956,
+      "Refund": 0.031228784792939578,
+      "Technical": 0.030842110567958474,
+      "Account Access": 0.856301531213192,
+      "Shipping": 0.03361344537815126,
+      "Other": 0.02880082498526812
+    },
+    "Shipping": {
+      "Billing": 0.026434047052603753,
+      "Refund": 0.026476578411405296,
+      "Technical": 0.02847351710930807,
+      "Account Access": 0.03769140164899882,
+      "Shipping": 0.8592436974789915,
+      "Other": 0.030936947554507956
+    },
+    "Other": {
+      "Billing": 0.029870473169442243,
+      "Refund": 0.029192124915139173,
+      "Technical": 0.031245275411984075,
+      "Account Access": 0.03180212014134275,
+      "Shipping": 0.018907563025210083,
+      "Other": 0.8501767825574543
+    }
+  },
+  "provenance_note": "All noise-rate estimates use source/proxy labels as reference. These are not independently verified ground-truth labels. Results describe the simulation, not necessarily real annotation errors."
+}

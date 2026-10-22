@@ -1,0 +1,139 @@
+{
+  "pipeline_version": "1.0.0",
+  "timestamp": "2026-10-21T14:19:17.578879",
+  "elapsed_seconds": 238.3167,
+  "dataset_records": 50000,
+  "language_filter": "all",
+  "split_sizes": {
+    "train": 40000,
+    "val": 5000,
+    "test": 5000
+  },
+  "primary_noise": "symmetric_15pct",
+  "model_comparison": [
+    {
+      "model": "tfidf_svm (tuned)",
+      "accuracy": 0.7638,
+      "macro_f1": 0.6479769267850393,
+      "weighted_f1": 0.756952222068076,
+      "macro_precision": 0.7206718262502737,
+      "macro_recall": 0.6021653600130384,
+      "n_samples": 5000,
+      "split": "validation",
+      "label_provenance": "proxy"
+    },
+    {
+      "model": "tfidf_logreg (tuned)",
+      "accuracy": 0.7428,
+      "macro_f1": 0.5995814905058051,
+      "weighted_f1": 0.735507653362652,
+      "macro_precision": 0.6473339462050914,
+      "macro_recall": 0.5703361863074552,
+      "n_samples": 5000,
+      "split": "validation",
+      "label_provenance": "proxy"
+    },
+    {
+      "model": "tfidf_svm (baseline)",
+      "accuracy": 0.759,
+      "macro_f1": 0.5566,
+      "weighted_f1": 0.7402,
+      "macro_precision": 0.8968,
+      "macro_recall": 0.4891,
+      "n_samples": 5000,
+      "split": "validation",
+      "label_provenance": "proxy"
+    },
+    {
+      "model": "tfidf_logreg (baseline)",
+      "accuracy": 0.74,
+      "macro_f1": 0.5032,
+      "weighted_f1": 0.7175,
+      "macro_precision": 0.8953,
+      "macro_recall": 0.4391,
+      "n_samples": 5000,
+      "split": "validation",
+      "label_provenance": "proxy"
+    },
+    {
+      "model": "dummy",
+      "accuracy": 0.4962,
+      "macro_f1": 0.1105,
+      "weighted_f1": 0.3291,
+      "macro_precision": 0.0827,
+      "macro_recall": 0.1667,
+      "n_samples": 5000,
+      "split": "validation",
+      "label_provenance": "proxy"
+    }
+  ],
+  "test_metrics": {
+    "accuracy": 0.7578,
+    "macro_f1": 0.6389,
+    "model": "tfidf_svm (tuned)",
+    "note": "Evaluated on strictly held-out untouched test split (5,000 samples)"
+  },
+  "review_comparison": [
+    {
+      "strategy": "issue_score",
+      "n_selected": 2000,
+      "n_errors_found": 1892,
+      "precision_at_k": 0.946,
+      "errors_per_100": 94.6,
+      "class_coverage": 6
+    },
+    {
+      "strategy": "combined",
+      "n_selected": 2000,
+      "n_errors_found": 1231,
+      "precision_at_k": 0.6155,
+      "errors_per_100": 61.550000000000004,
+      "class_coverage": 6
+    },
+    {
+      "strategy": "random",
+      "n_selected": 2000,
+      "n_errors_found": 297,
+      "precision_at_k": 0.1485,
+      "errors_per_100": 14.85,
+      "class_coverage": 6
+    }
+  ],
+  "detection_metrics": {
+    "precision_at_100": 1.0,
+    "true_positives_at_100": 100,
+    "k_actual_100": 100,
+    "precision_at_200": 1.0,
+    "true_positives_at_200": 200,
+    "k_actual_200": 200,
+    "precision_at_500": 0.99,
+    "true_positives_at_500": 495,
+    "k_actual_500": 500,
+    "precision_at_1000": 0.975,
+    "true_positives_at_1000": 975,
+    "k_actual_1000": 1000,
+    "precision_at_2000": 0.946,
+    "true_positives_at_2000": 1892,
+    "k_actual_2000": 2000,
+    "average_precision": 0.8168182896800242,
+    "total_true_errors": 6009
+  },
+  "label_provenance": "proxy (source labels used as reference)",
+  "hyperparameter_tuning": {
+    "total_trials": 18,
+    "best_svm": {
+      "C": 1.0,
+      "class_weight": "None",
+      "accuracy": 0.7638,
+      "macro_f1": 0.648
+    },
+    "best_logreg": {
+      "C": 8.0,
+      "class_weight": "None",
+      "accuracy": 0.7428,
+      "macro_f1": 0.5996
+    },
+    "accuracy_gain_vs_baseline": 0.0048,
+    "macro_f1_gain_vs_baseline": 0.0914
+  }
+}

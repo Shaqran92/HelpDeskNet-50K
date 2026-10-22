@@ -720,6 +720,15 @@ python -m pytest -v
 streamlit run app/Home.py
 ```
 
+### Deploy on Streamlit Community Cloud
+
+The hosted dashboard uses the pinned app dependencies in `app/requirements.txt`
+and the saved reports and models in `artifacts/` and `reports/tables/`.
+When creating the app, select this repository, the deployment branch, and
+`app/Home.py` as the entrypoint. Select Python 3.14 to match the saved
+scikit-learn 1.9.0 models. Raw and processed datasets are not needed by the
+dashboard and remain excluded from Git.
+
 ## 13. Dashboard Deliverables
 
 The dashboard (`app/Home.py`) provides 6 interactive pages loading real saved artifacts:
@@ -777,4 +786,3 @@ All criteria have been fully verified on live data and recorded:
    - **Stratified Combined Review**: **1,088 errors found** (54.40 errors / 100 reviews)
    - **Random Sampling Baseline**: **337 errors found** (16.85 errors / 100 reviews)
    - **Efficiency Boost**: Intelligent triage found **+1,180 more errors** (+350.1% increase) over random review under the identical budget.
-

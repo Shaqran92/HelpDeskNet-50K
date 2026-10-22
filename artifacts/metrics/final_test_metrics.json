@@ -1,0 +1,61 @@
+{
+  "model_name": "tfidf_svm (tuned)",
+  "metrics": {
+    "accuracy": 0.7578,
+    "macro_f1": 0.6389370235874635,
+    "weighted_f1": 0.7499030140880301,
+    "macro_precision": 0.7133599402380401,
+    "macro_recall": 0.5960755319850448,
+    "per_class": {
+      "Billing": {
+        "precision": 0.8230563002680965,
+        "recall": 0.6490486257928119,
+        "f1": 0.7257683215130025,
+        "support": 473
+      },
+      "Refund": {
+        "precision": 0.5,
+        "recall": 0.22282608695652173,
+        "f1": 0.3082706766917293,
+        "support": 184
+      },
+      "Technical": {
+        "precision": 0.7580133849947165,
+        "recall": 0.8673921805723499,
+        "f1": 0.8090225563909774,
+        "support": 2481
+      },
+      "Account Access": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4339622641509434,
+        "f1": 0.5257142857142857,
+        "support": 106
+      },
+      "Shipping": {
+        "precision": 0.7735849056603774,
+        "recall": 0.6949152542372882,
+        "f1": 0.7321428571428573,
+        "support": 59
+      },
+      "Other": {
+        "precision": 0.7588383838383839,
+        "recall": 0.7083087802003536,
+        "f1": 0.7327034440719292,
+        "support": 1697
+      }
+    },
+    "n_samples": 5000,
+    "split_name": "final_test",
+    "label_provenance": "proxy (source labels, not independently verified)",
+    "classes": [
+      "Billing",
+      "Refund",
+      "Technical",
+      "Account Access",
+      "Shipping",
+      "Other"
+    ],
+    "provenance_note": "Evaluated on 'final_test' split. Labels are 'proxy (source labels, not independently verified)'. Results may differ with independently verified labels."
+  },
+  "timestamp": "2026-10-21T14:54:27.904091"
+}
