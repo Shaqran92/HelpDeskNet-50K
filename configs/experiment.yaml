@@ -1,0 +1,65 @@
+experiment:
+  name: "baseline_v1"
+  random_seed: 42
+  n_folds: 5
+
+noise_simulation:
+  enabled: true
+  mechanisms:
+    - name: "symmetric"
+      rates: [0.05, 0.15, 0.25]
+    - name: "class_dependent"
+      rates: [0.05, 0.15, 0.25]
+    - name: "worker_dependent"
+      rates: [0.05, 0.15, 0.25]
+  worker_tiers:
+    tier_a:
+      count: 5
+      error_rate_multiplier: 0.5
+    tier_b:
+      count: 5
+      error_rate_multiplier: 1.5
+  random_seed: 42
+
+models:
+  baseline:
+    - name: "dummy"
+      strategy: "most_frequent"
+    - name: "tfidf_logreg"
+      max_features: 50000
+      ngram_range: [1, 2]
+      C: 1.0
+    - name: "tfidf_svm"
+      max_features: 50000
+      ngram_range: [1, 2]
+      C: 1.0
+  tuned:
+    - name: "tfidf_svm"
+      max_features: 50000
+      ngram_range: [1, 2]
+      C: 1.0
+      class_weight: null
+      validation_macro_f1: 0.6480
+      validation_accuracy: 0.7638
+    - name: "tfidf_logreg"
+      max_features: 50000
+      ngram_range: [1, 2]
+      C: 8.0
+      class_weight: null
+      validation_macro_f1: 0.5996
+      validation_accuracy: 0.7428
+
+review_budget:
+  total: 2000
+  high_priority: 1000
+  stratified: 600
+  random_audit: 400
+
+evaluation:
+  metrics: ["accuracy", "macro_f1", "precision", "recall"]
+  confidence_level: 0.95
+
+robust_learning:
+  enabled: true
+  methods: ["standard", "filtered", "confidence_weighted"]
+  note: "Validation-only comparison using synthetic-noise proxy labels."
