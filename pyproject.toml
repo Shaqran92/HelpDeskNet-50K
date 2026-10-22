@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "helpdesknet"
+version = "1.0.0"
+description = "HelpDeskNet-50K: Noisy Label Detection, Robust Text Classification, and Review Optimization"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "HelpDeskNet Research Team"}
+]
+keywords = [
+    "nlp",
+    "noisy-labels",
+    "customer-support",
+    "confident-learning",
+    "text-classification",
+    "active-learning"
+]
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "statsmodels>=0.14.0",
+    "scikit-learn>=1.2.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.14.0",
+    "streamlit>=1.22.0",
+    "cleanlab>=2.4.0",
+    "pyyaml>=6.0",
+    "joblib>=1.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.0",
+    "jupyter>=1.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["helpdesknet*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

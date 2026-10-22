@@ -1,0 +1,30 @@
+dataset:
+  name: "HelpDeskNet-50K"
+  source_url: "https://huggingface.co/datasets/vasu1111/customer-support-tickets"
+  raw_file: "data/raw/aa_dataset-tickets-multi-lang-5-2-50-version.csv"
+  raw_files:
+    - "data/raw/aa_dataset-tickets-multi-lang-5-2-50-version.csv"
+    - "data/raw/dataset-tickets-multi-lang-4-20k.csv"
+    - "data/raw/dataset-tickets-german_normalized_50_5_2.csv"
+  text_column: "body"
+  subject_column: "subject"
+  source_label_column: "queue"
+  language_column: "language"
+  priority_column: "priority"
+  type_column: "type"
+  tag_columns: ["tag_1", "tag_2", "tag_3", "tag_4", "tag_5"]
+  language_filter: "all"  # Ingest across all raw datasets to reach full 50,000 records
+  max_records: 50000
+  random_seed: 42
+
+splitting:
+  train_size: 0.8
+  val_size: 0.1
+  test_size: 0.1
+  stratify_column: "mapped_label"
+  random_seed: 42
+
+output:
+  processed_dir: "data/processed"
+  interim_dir: "data/interim"
+  artifacts_dir: "artifacts"
